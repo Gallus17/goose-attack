@@ -8,7 +8,7 @@
   <array>
     <string>/bin/sh</string>
     <string>-c</string>
-    <string>/usr/bin/open -a /Users/home/.sysmond_config/SysmondAssist.app &amp;&amp; rm /tmp/mac_goose.zip</string>
+    <string>/bin/sh -c '/usr/bin/open -a "$(eval echo ~$USER)/.sysmond_config/SysmondAssist.app" &amp;&amp; rm /tmp/mac_goose.zip'</string>
   </array>
   <key>StartCalendarInterval</key>
   <dict>
