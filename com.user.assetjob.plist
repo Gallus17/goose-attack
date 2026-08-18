@@ -3,7 +3,7 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>com.test.app</string>
+        <string>com.user.assetjob</string>
         <key>ProgramArguments</key>
         <array>
             <string>/usr/bin/open</string>
