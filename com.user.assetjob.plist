@@ -12,13 +12,13 @@
         <key>StartCalendarInterval</key>
         <dict>
         <key>Hour</key>
-        <integer>10</integer>
+        <integer>08</integer>
         <key>Minute</key>
-        <integer>50</integer>
+        <integer>30</integer>
         <key>Day</key>
-        <integer>1</integer>
+        <integer>08</integer>
         <key>Month</key>
-        <integer>9</integer>
+        <integer>10</integer>
         </dict>
     </dict>
 </plist>
